@@ -36,9 +36,9 @@ def recommendMovies(movie):
 
 def main():
     st.set_page_config(page_title='Movie Recommender', layout="wide")
-    st.title("Hello")
+    st.title("Hello, Welcome to Movie Recommender!")
 
-    selected_movie = st.selectbox('Search movies...', data["movie_title"].values, )
+    selected_movie = st.selectbox('Enter your favourite movie below to get recommendations!', data["movie_title"].values, )
     if st.button('Recommend'):
         movieNames, moviePosters = recommendMovies(selected_movie)
         col1, col2, col3, col4, col5 = st.columns(5,gap='medium', vertical_alignment='bottom')
