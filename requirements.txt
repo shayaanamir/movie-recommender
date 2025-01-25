@@ -1,1 +1,5 @@
+pickle
+requests
+streamlit
 dotenv
+os
