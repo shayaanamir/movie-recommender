@@ -2,11 +2,10 @@ import pickle
 import requests
 import streamlit as st
 from dotenv import load_dotenv
-import os
 
 data = pickle.load(open('movie_list.pkl','rb'))
 similarity = pickle.load(open('similarity.pkl','rb'))
-api_key = os.getenv('api_key')
+api_key = st.secrets["api_key"]
 
 def configure():
     load_dotenv()
