@@ -35,6 +35,7 @@ def recommendMovies(movie):
 
 
 def main():
+    st.set_page_config(page_title='Movie Recommender', layout="wide")
     st.title("Hello")
 
     selected_movie = st.selectbox('Search movies...', data["movie_title"].values, )
@@ -44,18 +45,29 @@ def main():
         with col1:
             st.text(movieNames[0])
             st.image(moviePosters[0])
+            st.text(movieNames[5])
+            st.image(moviePosters[5])
         with col2:
             st.text(movieNames[1])
             st.image(moviePosters[1])
+            st.text(movieNames[6])
+            st.image(moviePosters[6])
 
         with col3:
             st.text(movieNames[2])
             st.image(moviePosters[2])
+            st.text(movieNames[7])
+            st.image(moviePosters[7])
+            
         with col4:
             st.text(movieNames[3])
             st.image(moviePosters[3])
+            st.text(movieNames[8])
+            st.image(moviePosters[8])
         with col5:
             st.text(movieNames[4])
             st.image(moviePosters[4])
+            st.text(movieNames[9])
+            st.image(moviePosters[9])
 
 main()
