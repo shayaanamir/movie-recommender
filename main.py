@@ -6,8 +6,6 @@ data = pickle.load(open('movie_list.pkl','rb'))
 similarity = pickle.load(open('similarity.pkl','rb'))
 api_key = st.secrets["api_key"]
 
-def configure():
-    load_dotenv()
 
 def fetchPoster(movie_id):
     url = f"https://api.themoviedb.org/3/movie/{int(movie_id)}?api_key={api_key}&language=en-US"
@@ -37,7 +35,6 @@ def recommendMovies(movie):
 
 
 def main():
-    configure()
     st.title("Hello")
 
     selected_movie = st.selectbox('Search movies...', data["movie_title"].values, )
