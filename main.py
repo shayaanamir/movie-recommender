@@ -1,7 +1,6 @@
 import pickle
 import requests
 import streamlit as st
-from dotenv import load_dotenv
 
 data = pickle.load(open('movie_list.pkl','rb'))
 similarity = pickle.load(open('similarity.pkl','rb'))
